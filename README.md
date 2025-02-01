@@ -4,5 +4,4 @@ Project for 202520
 The purpose of this project is to make a quiz website. 
 
 Team Members
-
-Corbitt, Peter (Petercorbschool)
+<br>Corbitt, Peter (Petercorbschool)
