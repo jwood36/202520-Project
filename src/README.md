@@ -1,7 +1,8 @@
 IDE: Visual Studio 2022 Community  
 .Net Framework Version: 4.8  
 
-<h1>Features</h1>  
+#Features  
+
 - Master Page Design(Peter Corbitt)  
 - Quiz/Attempt Tracking  
 - Timer(James Karimov and Hannah Cortright)  
