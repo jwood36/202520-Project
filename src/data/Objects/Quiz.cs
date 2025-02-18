@@ -2,6 +2,7 @@
 
 namespace coding_lms.data {
 	public class Quiz {
+
 		public Quiz(int term, string crn, string name) : this() {
 			this._term = term;
 			this._crn = crn;
@@ -61,6 +62,13 @@ namespace coding_lms.data {
 		public int Time {
 			get { return this._time; }
 			set { this._time = value; }
+		}
+
+		private int _ppq;
+
+		public int PPQ {
+			get { return _ppq; }
+			set { _ppq = value; }
 		}
 
 	}
