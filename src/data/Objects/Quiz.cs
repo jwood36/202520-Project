@@ -57,5 +57,11 @@ namespace coding_lms.data {
 			set { this._name = value; }
 		}
 
+		private int _time;
+		public int Time {
+			get { return this._time; }
+			set { this._time = value; }
+		}
+
 	}
 }
