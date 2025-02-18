@@ -33,6 +33,12 @@ namespace coding_lms.data {
 			set { _uuid = value; }
 		}
 
+		private bool _random;
+		public bool IsRandom {
+			get { return _random; }
+			set { _random = value; }
+		}
+
 		private int _term;
 		public int Term {
 			get { return _term; }
