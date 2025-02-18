@@ -28,6 +28,11 @@ namespace coding_lms.data {
 					this._uuid = Guid.NewGuid();
 				}
 
+				return _uuid;
+			}
+			set { _uuid = value; }
+		}
+
 		private int _term;
 		public int Term {
 			get { return _term; }
