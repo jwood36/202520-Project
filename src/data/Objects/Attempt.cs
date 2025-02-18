@@ -28,6 +28,11 @@ namespace coding_lms.data {
 			get { return _quiz; }
 			internal set { _quiz = value; }
 		}
+		private IEnumerable<AttemptPool> _attpool;
+		public IEnumerable<AttemptPool> Results {
+			get { return this._attpool; }
+			set { this._attpool = value; }
+		}
 		#endregion
 
 		#region Static Methods
