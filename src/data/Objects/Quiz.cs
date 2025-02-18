@@ -15,6 +15,12 @@ namespace coding_lms.data {
 			return;
 		}
 
+		private long _id;
+		public long ID {
+			get { return _id; }
+			set { _id = value; }
+		}
+
 		private int _term;
 		public int Term {
 			get { return _term; }
