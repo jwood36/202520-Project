@@ -105,7 +105,7 @@
     <Compile Include="Objects\Question.cs" />
     <Compile Include="Objects\Quiz.cs" />
     <Compile Include="Objects\ResultPool.cs" />
-    <Compile Include="QuizPool.cs" />
+    <Compile Include="Objects\QuizPool.cs" />
     <Compile Include="RootDBContext.cs" />
     <Compile Include="Objects\Student.cs" />
     <Compile Include="SystemDB.cs" />
