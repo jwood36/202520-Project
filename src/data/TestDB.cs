@@ -6,6 +6,23 @@ namespace coding_lms.data {
 	public class TestDB : RootDBContext {
 		public TestDB() { }
 
+		public Quiz GetTest(int term, string crn, string name) {
+			Quiz ret;
+
+#if DEBUG
+			ret = new Quiz(term, crn, name) {
+				UUID = Guid.NewGuid(),
+				Time = 1024,
+				IsRandom = true,
+				PPQ = 1
+			};
+#else
+
+#endif
+
+			// Return Value Result
+			return ret;
+		}
 		#region Attempt ONLY Method/Functions
 		/// <summary>
 		/// Returns a single Attempt record
