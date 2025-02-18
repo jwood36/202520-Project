@@ -21,6 +21,13 @@ namespace coding_lms.data {
 			set { _id = value; }
 		}
 
+		private Guid _uuid;
+		public Guid UUID {
+			get {
+				if ( this._uuid == Guid.Empty ) {
+					this._uuid = Guid.NewGuid();
+				}
+
 		private int _term;
 		public int Term {
 			get { return _term; }
