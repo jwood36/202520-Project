@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace coding_lms.data {
 	public class Attempt {
@@ -13,21 +14,25 @@ namespace coding_lms.data {
 			get { return this._id; }
 			set { this._id = value; }
 		}
+
 		private Guid _guid; // Database Row-GUID value
 		public Guid UID {
 			get { return _guid; }
 			internal set { _guid = value; }
 		}
+
 		private Student _student;   // Students Row-GUID value
 		public Student Student {
 			get { return _student; }
 			internal set { _student = value; }
 		}
+
 		private Quiz _quiz; // Quiz Row-GUID value
 		public Quiz Quiz {
 			get { return _quiz; }
 			internal set { _quiz = value; }
 		}
+
 		private IEnumerable<AttemptPool> _attpool;
 		public IEnumerable<AttemptPool> Results {
 			get { return this._attpool; }

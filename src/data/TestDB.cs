@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+
+#if DEBUG
+#endif
+
 
 namespace coding_lms.data {
 	public class TestDB : RootDBContext {
 		public TestDB() { }
 
+		#region Quiz ONLY Method/Functions
 		public Quiz GetTest(int term, string crn, string name) {
 			Quiz ret;
 
@@ -159,6 +165,8 @@ namespace coding_lms.data {
 						return ret;
 #endif
 		}
+		#endregion
+
 		#region Attempt ONLY Method/Functions
 		/// <summary>
 		/// Returns a single Attempt record
@@ -284,6 +292,8 @@ namespace coding_lms.data {
 			return null;
 		}
 
+
 		#endregion
+
 	}
 }
