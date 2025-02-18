@@ -166,7 +166,93 @@ namespace coding_lms.data {
 		/// <param name="id">Long Type; the ID value for the Attempt</param>
 		/// <returns></returns>
 		public Attempt GetAttempt(Int64 id) {
+#if DEBUG
+			var ret = new Attempt() {
+				ID = id,
+				UID = Guid.NewGuid(),
+				Student = new Student("A0123456789") {
+					UUID = Guid.NewGuid(),
+					Email = "test.student@alabama.edu",
+					FirstName = "Test",
+					LastName = "Student"
+				},
+				Quiz = new Quiz(202520, "20123", "some-test") {
+					UUID = Guid.NewGuid(),
+					Time = 1024,
+					IsRandom = true,
+					PPQ = 1
+				}
+			};
+			ret.Results = new List<AttemptPool>() {
+					new AttemptPool(ret) {
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = false,
+						Points = 0
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = false,
+						Points = 0
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = false,
+						Points = 0
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = false,
+						Points = 0
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					},
+					new AttemptPool(ret){
+						Question = Guid.NewGuid(),
+						Answer = Guid.NewGuid(),
+						IsCorrect = true,
+						Points = 1
+					}
+				};
+
+			return ret;
+#else
+			// Open DBContext
+
+			// 
 			return null;
+#endif
 		}
 
 		/// <summary>
