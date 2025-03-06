@@ -270,10 +270,14 @@ namespace coding_lms.data {
 		/// <param name="student">String value; The Student's SRN value</param>
 		/// <returns></returns>
 		public Attempt GetAttempt(string quiz, string student) {
+#if DEBUG
+			return null;
+#else
 			return this.ExecuteSProc<Attempt>("dbo.ap_Quiz_Get @quizid=@qid, @studentid=@sid",
 				new SqlParameter("@qid", quiz)
 				, new SqlParameter("@sid", student)
 					).Single();
+#endif
 		}
 
 		/// <summary>
