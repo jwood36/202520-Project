@@ -98,6 +98,7 @@
     <Compile Include="Objects\QuizPool.cs" />
     <Compile Include="RootDBContext.cs" />
     <Compile Include="Objects\Student.cs" />
+    <Compile Include="Views\SectionView.cs" />
     <Compile Include="SystemDB.cs" />
     <Compile Include="Objects\Term.cs" />
     <Compile Include="TestDB.cs" />

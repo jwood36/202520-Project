@@ -248,6 +248,55 @@ namespace coding_lms.data {
 		}
 
 #if DEBUG
+		private IEnumerable<SectionView> _sections {
+			get {
+				return new List<SectionView>() {
+					// Spring 2025
+					new SectionView(){Term=202520, Course="CIS-150", CRN=23456, StudentCount=25}
+					,new SectionView(){Term=202520, Course="HED-2256", CRN=24567, StudentCount=15}
+					,new SectionView(){Term=202520, Course="CIS-2156", CRN=27851, StudentCount=35}
+					,new SectionView(){Term=202520, Course="CDA-1150", CRN=25678, StudentCount=100}
+					// Fall 2024
+					,new SectionView(){Term=202510, Course="CIS-150", CRN=13456, StudentCount=25}
+					,new SectionView(){Term=202510, Course="CDA-1150", CRN=15678, StudentCount=15}
+					,new SectionView(){Term=202510, Course="CIS-2156", CRN=17851, StudentCount=35}
+					,new SectionView(){Term=202510, Course="ART-1000", CRN=15678, StudentCount=10}
+					// Summer 2024
+					,new SectionView(){Term=202430, Course="ART-1000", CRN=35678, StudentCount=15}
+					,new SectionView(){Term=202430, Course="CIS-150", CRN=33456, StudentCount=10}
+					,new SectionView(){Term=202430, Course="CIS-2156", CRN=37851, StudentCount=500}
+					,new SectionView(){Term=202430, Course="CDA-1150", CRN=35678, StudentCount=20}
+					// Spring 2024
+					,new SectionView(){Term=202420, Course="CIS-150", CRN=23456, StudentCount=25}
+				};
+			}
+		}
+#endif
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="id">int (Int32) value; Term.ID field value</param>
+		/// <returns></returns>
+		public IEnumerable<SectionView> GetSectionsView(int? id = null) {
+#if DEBUG
+			var ret = new List<SectionView>();
+
+			if ( id.HasValue ) {
+				ret = this._sections.Where(sv => sv.Term == id.Value).ToList();
+			}
+			else {
+				ret = this._sections.ToList();
+			}
+
+			return ret;
+#else
+			return null;
+#endif
+		}
+
+
+#if DEBUG
 		private IEnumerable<EnrollmentView> _enrollments {
 			get {
 				return new List<EnrollmentView>() {
