@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Views\QuestionView.cs" />
+    <Compile Include="Views\QuizView.cs" />
+    <Compile Include="Views\EnrollmentView.cs" />
     <Compile Include="Objects\Answer.cs" />
     <Compile Include="Objects\Attempt.cs" />
     <Compile Include="InstructorDB.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="RootDBContext.cs" />
     <Compile Include="Objects\Student.cs" />
     <Compile Include="Views\SectionView.cs" />
+    <Compile Include="Views\StudentView.cs" />
     <Compile Include="SystemDB.cs" />
     <Compile Include="Objects\Term.cs" />
     <Compile Include="TestDB.cs" />
