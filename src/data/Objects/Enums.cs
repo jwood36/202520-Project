@@ -13,4 +13,9 @@ namespace coding_lms.data {
 		// DEFAULT
 		, UNKNOWN = -1
 	}
+
+	[DefaultValue ( value: Fall )]
+	public enum TermEnum {
+		Fall = 10, Spring = 20, Summer =30
+	}
 }
