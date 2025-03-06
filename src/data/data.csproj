@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\QuestionView.cs" />
     <Compile Include="Objects\Answer.cs" />
     <Compile Include="Objects\Attempt.cs" />
     <Compile Include="InstructorDB.cs" />
