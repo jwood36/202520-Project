@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
 
 #if DEBUG
 #endif
@@ -258,7 +256,9 @@ namespace coding_lms.data {
 #else
 			// Open DBContext
 
-			// 
+			// Call SProc for Attempt Results
+
+			// return the Collection of AttemptPool objects
 			return null;
 #endif
 		}

@@ -2,7 +2,7 @@
 
 namespace coding_lms.data {
 
-	[DefaultValue(value: UNKNOWN)]
+	[DefaultValue ( value: UNKNOWN )]
 	public enum QuestionEnum {
 		TF = 1
 		, MCL = 2
