@@ -8,7 +8,7 @@ using System.Linq;
 
 
 namespace coding_lms.data {
-	public class TestDB : RootDBContext {
+	public class TestDB : RootDBContext, IDisposable {
 		public TestDB() { }
 
 		#region Quiz ONLY Method/Functions
@@ -295,5 +295,12 @@ namespace coding_lms.data {
 
 		#endregion
 
+		#region IDisposable Implementations
+
+		void IDisposable.Dispose() {
+			base.Dispose();
+		}
+
+		#endregion
 	}
 }
