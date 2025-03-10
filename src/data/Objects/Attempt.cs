@@ -3,44 +3,66 @@ using System.Collections.Generic;
 
 namespace coding_lms.data {
 	public class Attempt {
-		public Attempt() { }
-		public Attempt(Guid guid) {
+		public Attempt () {
+		}
+		public Attempt ( Guid guid ) {
 			this._guid = guid;
 		}
 
 		#region Properties
 		private Int64 _id;  // Database ID value
 		internal Int64 ID {
-			get { return this._id; }
-			set { this._id = value; }
+			get {
+				return this._id;
+			}
+			set {
+				this._id = value;
+			}
 		}
 
 		private Guid _guid; // Database Row-GUID value
 		public Guid UID {
-			get { return _guid; }
-			internal set { _guid = value; }
+			get {
+				return _guid;
+			}
+			internal set {
+				_guid = value;
+			}
 		}
 
 		private Student _student;   // Students Row-GUID value
 		public Student Student {
-			get { return _student; }
-			internal set { _student = value; }
+			get {
+				return _student;
+			}
+			internal set {
+				_student = value;
+			}
 		}
 
 		private Quiz _quiz; // Quiz Row-GUID value
 		public Quiz Quiz {
-			get { return _quiz; }
-			internal set { _quiz = value; }
+			get {
+				return _quiz;
+			}
+			internal set {
+				_quiz = value;
+			}
 		}
 
 		private IEnumerable<AttemptPool> _attpool;
 		public IEnumerable<AttemptPool> Results {
-			get { return this._attpool; }
-			set { this._attpool = value; }
+			get {
+				return this._attpool;
+			}
+			set {
+				this._attpool = value;
+			}
 		}
 		#endregion
 
 		#region Static Methods
+#if !DEBUG
 		/// <summary>
 		/// Create an Attempt Object from the Int64 value passed
 		/// </summary>
@@ -58,6 +80,7 @@ namespace coding_lms.data {
 
 			return att;
 		}
-		#endregion
+#endif
 	}
+	#endregion
 }
