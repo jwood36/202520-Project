@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
 
 #if DEBUG
 #endif
 
 
 namespace coding_lms.data {
-	public class TestDB : RootDBContext {
+	public class TestDB : RootDBContext, IDisposable {
 		public TestDB() { }
 
 		#region Quiz ONLY Method/Functions
@@ -258,7 +256,9 @@ namespace coding_lms.data {
 #else
 			// Open DBContext
 
-			// 
+			// Call SProc for Attempt Results
+
+			// return the Collection of AttemptPool objects
 			return null;
 #endif
 		}
@@ -270,10 +270,14 @@ namespace coding_lms.data {
 		/// <param name="student">String value; The Student's SRN value</param>
 		/// <returns></returns>
 		public Attempt GetAttempt(string quiz, string student) {
+#if DEBUG
+			return null;
+#else
 			return this.ExecuteSProc<Attempt>("dbo.ap_Quiz_Get @quizid=@qid, @studentid=@sid",
 				new SqlParameter("@qid", quiz)
 				, new SqlParameter("@sid", student)
 					).Single();
+#endif
 		}
 
 		/// <summary>
@@ -282,9 +286,13 @@ namespace coding_lms.data {
 		/// <param name="quiz">GUID type; the Quiz UID value</param>
 		/// <returns></returns>
 		public IEnumerable<Question> GetQuestions(string course = null) {
+#if DEBUG
+			return null;
+#else
 			return this.ExecuteSProc<Question>("dbo.ap_Question_Get @CourseID=@cid"
 				, new SqlParameter("@cid", course ?? ( object )DBNull.Value)
 			);
+#endif
 		}
 
 
@@ -295,5 +303,12 @@ namespace coding_lms.data {
 
 		#endregion
 
+		#region IDisposable Implementations
+
+		void IDisposable.Dispose() {
+			base.Dispose();
+		}
+
+		#endregion
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace coding_lms.data {
 
-	[DefaultValue(value: UNKNOWN)]
+	[DefaultValue ( value: UNKNOWN )]
 	public enum QuestionEnum {
 		TF = 1
 		, MCL = 2
@@ -12,5 +12,10 @@ namespace coding_lms.data {
 
 		// DEFAULT
 		, UNKNOWN = -1
+	}
+
+	[DefaultValue ( value: Fall )]
+	public enum TermEnum {
+		Fall = 10, Spring = 20, Summer =30
 	}
 }
