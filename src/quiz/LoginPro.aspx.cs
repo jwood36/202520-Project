@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Playground2
+namespace Login
 {
-    public partial class LoginProcessing2 : Page
+    public partial class LoginProcessing : Page
     {
         protected void SubmitButton(object sender, EventArgs e)
         {
