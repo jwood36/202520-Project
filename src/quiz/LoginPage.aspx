@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" CodeFile="LoginPro.aspx.cs" Inherits="Playground2.LoginProcessing2"%>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" CodeFile="LoginPro.aspx.cs" Inherits="Login.LoginProcessing"%>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
