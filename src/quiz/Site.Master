@@ -21,6 +21,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" runat="server" href="~/">Coding-LMS</a>
+                <a class="navbar-brand" runat="server" href="~/LoginPage">(Login Page Testing)</a>
                 <asp:ContentPlaceHolder ID="cphNavBar" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
