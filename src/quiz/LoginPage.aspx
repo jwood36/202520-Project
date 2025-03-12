@@ -1,13 +1,16 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" CodeFile="LoginPro.aspx.cs" Inherits="Login.LoginProcessing"%>
+﻿<%@ Page Title="Login Page" Language="C#" AutoEventWireup="true" CodeFile="LoginPro.aspx.cs" Inherits="Login.LoginProcessing"%>
 
 <!DOCTYPE html>
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <meta charset="utf-8" />
     <title>Login Page</title> 
-    <link rel="stylesheet" href="LoginPage.css" />
-    <script src="LoginPage.js"></script>
+    <link rel="stylesheet" href="~/Content/LoginPage.css"/>
+    <script src="~/Scripts/LoginPage.js"></script>
 </head>
+
 <body>
     <form id="form1" runat="server">
         <asp:Label ID="fnLabel" runat="server" Text="First Name: "/>
@@ -22,4 +25,5 @@
         <asp:Button ID="submit" runat="server" Text="Sumbit" OnClick="Validate"/>
     </form>
 </body>
+
 </html>
