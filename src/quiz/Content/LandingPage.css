@@ -1,0 +1,17 @@
+﻿h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    background: darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 15px;
+}

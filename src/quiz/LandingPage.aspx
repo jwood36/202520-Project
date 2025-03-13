@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="Landing Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LandingPage.aspx.cs" Inherits="quiz.LandingPage" %>
 
-<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
-
+<asp:Content ID="HeadContent" ContentPlaceHolderID="cphNavBar" runat="server">
+    <link href="/Content/LandingPage.css" rel="stylesheet" type="text/css"/>
 </asp:Content>
 
-<asp:Content ID="ContentBody" ContentPlaceHolderID="cphMainBody" runat="server">  
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMainBody" runat="server">  
         <main>
             <section class="row" aria-labelledby="aspnetTitle">
-                <h1 id="landingPageTitle" style="text-align:center;font-weight:bold;">Landing Page</h1>
-                <table align="center" style="width:35rem;border:1px,solid,black;">
+                <h1 id="landingPageTitle">Landing Page</h1>
+                <table align="center" style="width:35rem;">
                     <tr>
                         <td>Term:</td>
                     </tr>
