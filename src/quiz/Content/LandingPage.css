@@ -10,6 +10,7 @@ table {
     background: darkgrey;
     margin-left: auto;
     margin-right: auto;
+    border-collapse: separate !important;
 }
 
 th, td {
