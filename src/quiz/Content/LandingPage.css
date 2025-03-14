@@ -17,3 +17,12 @@ table {
 th, td {
     padding: 15px;
 }
+
+input.startButton {
+    color: white;
+    background-color: rgb(0, 155, 0);
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 7px;
+    width: 10rem;
+    height: 3rem;
+}

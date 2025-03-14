@@ -12,15 +12,19 @@
                     <tr>
                         <td>Term:</td>
                     </tr>
+                    
                     <tr >
-                        <td>User: <input type="text" placeholder="A########"/></td>
+                        
+                        <td>UserID: <input id="UUID" type="text" placeholder="A########"/></td>
                     </tr>
                     <tr >
                         <td>Time: </td>
                     </tr>
                     <tr align="center">
-                       <td><input type="submit" value="Start" /></td>
+                       <td><input class="startButton" type="submit" value="Start" /></td>
+                        
                     </tr>
+                    
                 </table>
             </section>
         </main>
