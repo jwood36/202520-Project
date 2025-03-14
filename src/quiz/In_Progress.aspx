@@ -1,19 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="In_Progress.aspx.cs" Inherits="quiz.In_Progress" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="In_Progress.aspx.cs" Inherits="quiz.In_Progress" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="timer">
-       
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMainBody" runat="server">
+        <div 
+            id="timer">
         </div>
-        
-    </form>
-</body>
     <script>
 
         //this function should do hours and minutes
@@ -91,4 +81,4 @@
         }
     </script>
 
-</html>
+    </asp:Content>
