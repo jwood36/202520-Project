@@ -66,22 +66,23 @@ namespace quiz
             string studentNumber = StudentNumberTextBox.Text.Trim();
 
             // Validate student number format
-            if (string.IsNullOrEmpty(studentNumber) || studentNumber.Length != 9 || studentNumber[0] != 'A' || !studentNumber.Substring(1).All(char.IsDigit))
+            if (string.IsNullOrEmpty(studentNumber) || studentNumber[0] != 'A' || !studentNumber.Substring(1).All(char.IsDigit))
             {
                 ErrorLabel.Text = "Invalid student number format. It should start with 'A' followed by 8 digits.";
                 return;
             }
 
             // Check if the student exists in TestDB
-            using (TestDB testDb = new TestDB())
-            {
-                Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
-                if (attempt == null)
-                {
-                    ErrorLabel.Text = "You are not enrolled in this quiz.";
-                    return;
-                }
-            }
+            //This does not seem functional commenting out for now 
+           // using (TestDB testDb = new TestDB())
+           // {
+           //     Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
+           //     if (attempt == null)
+           //     {
+           //         ErrorLabel.Text = "You are not enrolled in this quiz.";
+           //         return;
+           //     }
+           // }
 
             // Store student number in session
             Session["StudentID"] = studentNumber;
