@@ -18,11 +18,16 @@ th, td {
     padding: 15px;
 }
 
-input.startButton {
+button, input[type="submit"], .start-button {
+    background-color: #4CAF50;
     color: white;
-    background-color: rgb(0, 155, 0);
-    border: 1px solid rgb(84, 84, 84);
-    border-radius: 7px;
-    width: 10rem;
-    height: 3rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
+
+    button:hover, input[type="submit"]:hover, .start-button:hover {
+        background-color: #45a049;
+    }
