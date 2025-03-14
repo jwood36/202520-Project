@@ -19,15 +19,17 @@ th, td {
 }
 
 button, input[type="submit"], .start-button {
-    background-color: #4CAF50;
+    background-color: rgb(60, 155, 0);
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid rgb(84, 84, 84);
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 10rem;
+    height: 3rem;
 }
 
     button:hover, input[type="submit"]:hover, .start-button:hover {
-        background-color: #45a049;
+        background-color: rgb(40, 135, 0);
     }

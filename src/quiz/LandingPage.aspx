@@ -16,7 +16,7 @@
                     <td><asp:Label ID="ErrorLabel" runat="server" ForeColor="Red"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td>User: <asp:TextBox ID="StudentNumberTextBox" runat="server" placeholder="A########" required="true"></asp:TextBox></td>
+                    <td>UserID: <asp:TextBox ID="StudentNumberTextBox" runat="server" placeholder="A########" required="true"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Time: <asp:Label ID="TimeLabel" runat="server" /></td>
