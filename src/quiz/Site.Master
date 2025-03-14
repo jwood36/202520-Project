@@ -18,9 +18,9 @@
 <body>
     <form runat="server">
         <header>
-            <div class="logo">
+            <a href="/Default.aspx" class="logo"> <!-- No current home screen using Default for now -->
                 Coding-LMS <!-- Temporary Logo -->
-            </div>
+            </a>
             <nav>
                 <div class="test-name">Quiz Site</div>
                 <asp:ContentPlaceHolder ID="cphNavBar" runat="server"></asp:ContentPlaceHolder>
