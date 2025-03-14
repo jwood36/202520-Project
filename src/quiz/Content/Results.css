@@ -25,7 +25,10 @@
     font-size: 20px;
     font-weight: bold;
 }
-
+#PercentageLabel{
+    padding: 1px;
+    background-color: white;
+}
 /* Styling the disclaimer section */
 .disclaimer {
     background-color: #F5DEB3; 
