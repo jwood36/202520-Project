@@ -15,8 +15,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="<%= Page.GetType().Name %>">
-
+<body>
     <form runat="server">
         <header>
             <div class="logo">
