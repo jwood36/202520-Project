@@ -12,7 +12,7 @@ namespace quiz
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            {
+            
                 // Get the quiz details from the URL
                 string termIdStr = Page.RouteData.Values["termid"] as string;
                 string crn = Page.RouteData.Values["crn"] as string;
@@ -46,10 +46,16 @@ namespace quiz
                     // Format and display the quiz time
                     TimeLabel.Text = $"{FormatTime(quiz.Time)}";
                 }
-            }
+            
         }
 
         protected void StartButton_Click(object sender, EventArgs e)
+        {
+            // Show the confirmation panel
+            ConfirmationPanel.Visible = true;
+        }
+
+        protected void ConfirmButton_Click(object sender, EventArgs e)
         {
             // Get the same quiz details again to direct to URL
             string termId = Page.RouteData.Values["termid"] as string;
@@ -83,6 +89,13 @@ namespace quiz
             string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
             Response.Redirect(quizUrl);
         }
+
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+            // Hide the confirmation panel if the user cancels
+            ConfirmationPanel.Visible = false;
+        }
+
 
         // Converts time in minutes assumes time is given in minutes and not seconds
         private string FormatTime(int timeInMinutes)
