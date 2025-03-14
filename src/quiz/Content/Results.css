@@ -1,17 +1,17 @@
-﻿/* General container for the results */
+﻿/* Container for the results */
 .results-container {
-    background-color: #D3D3D3; 
-    border-radius: 20px; 
+    background-color: #D3D3D3;
+    border-radius: 20px;
     padding: 20px;
     margin: 0 auto;
-    width: 50%; 
+    width: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
 /* Styling the results section */
 .results {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
     .results h2 {
@@ -25,13 +25,16 @@
     font-size: 20px;
     font-weight: bold;
 }
-#PercentageLabel{
+
+.results {
     padding: 1px;
     background-color: white;
+    display: inline-block
 }
+
 /* Styling the disclaimer section */
 .disclaimer {
-    background-color: #F5DEB3; 
+    background-color: #F5DEB3;
     padding: 15px;
     border-radius: 15px;
 }
