@@ -56,6 +56,26 @@ namespace quiz
             string crn = Page.RouteData.Values["crn"] as string;
             string shortName = Page.RouteData.Values["shortname"] as string;
 
+            // Get student number from input field
+            string studentNumber = StudentNumberTextBox.Text.Trim();
+
+            // Validate student number format
+            if (string.IsNullOrEmpty(studentNumber) || studentNumber.Length != 9 || studentNumber[0] != 'A' || !studentNumber.Substring(1).All(char.IsDigit))
+            {
+                ErrorLabel.Text = "Invalid student number format. It should start with 'A' followed by 8 digits.";
+                return;
+            }
+
+            // Check if the student exists in TestDB
+            using (TestDB testDb = new TestDB())
+            {
+                Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
+                if (attempt == null)
+                {
+                    ErrorLabel.Text = "Student number not found. Please check and try again.";
+                    return;
+                }
+            }
             string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
             Response.Redirect(quizUrl);
         }

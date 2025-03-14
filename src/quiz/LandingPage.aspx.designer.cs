@@ -24,6 +24,24 @@ namespace quiz
         protected global::System.Web.UI.WebControls.Label TermLabel;
 
         /// <summary>
+        /// ErrorLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+
+        /// <summary>
+        /// StudentNumberTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox StudentNumberTextBox;
+
+        /// <summary>
         /// TimeLabel control.
         /// </summary>
         /// <remarks>

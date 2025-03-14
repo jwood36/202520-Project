@@ -13,7 +13,10 @@
                     <td>Term: <asp:Label ID="TermLabel" runat="server" /></td>
                 </tr>
                 <tr>
-                    <td>User: <input type="text" placeholder="A########"/></td>
+                    <td><asp:Label ID="ErrorLabel" runat="server" ForeColor="Red"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td>User: <asp:TextBox ID="StudentNumberTextBox" runat="server" placeholder="A########" required="true"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Time: <asp:Label ID="TimeLabel" runat="server" /></td>
