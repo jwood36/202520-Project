@@ -76,7 +76,11 @@ namespace quiz
                     return;
                 }
             }
-            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress/{studentNumber}";
+
+            // Store student number in session
+            Session["StudentID"] = studentNumber;
+
+            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
             Response.Redirect(quizUrl);
         }
 
