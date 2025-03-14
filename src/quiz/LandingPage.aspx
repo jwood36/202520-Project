@@ -5,27 +5,25 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMainBody" runat="server">  
-        <main>
-            <section class="row" aria-labelledby="aspnetTitle">
-                <h1 id="landingPageTitle">Landing Page</h1>
-                <table align="center">
-                    <tr>
-                        <td>Term:</td>
-                    </tr>
-                    
-                    <tr >
-                        
-                        <td>UserID: <input id="UUID" type="text" placeholder="A########"/></td>
-                    </tr>
-                    <tr >
-                        <td>Time: </td>
-                    </tr>
-                    <tr align="center">
-                       <td><input class="startButton" type="submit" value="Start" /></td>
-                        
-                    </tr>
-                    
-                </table>
-            </section>
-        </main>
+    <main>
+        <section class="row" aria-labelledby="aspnetTitle">
+            <h1 id="landingPageTitle">Landing Page</h1>
+            <table align="center">
+                <tr>
+                    <td>Term: <asp:Label ID="TermLabel" runat="server" /></td>
+                </tr>
+                <tr>
+                    <td>User: <input type="text" placeholder="A########"/></td>
+                </tr>
+                <tr>
+                    <td>Time: <asp:Label ID="TimeLabel" runat="server" /></td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <asp:Button ID="StartButton" runat="server" CssClass="start-button" Text="Start" OnClick="StartButton_Click" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 </asp:Content>
