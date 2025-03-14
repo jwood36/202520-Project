@@ -11,7 +11,7 @@
         <div id="timer">
        
         </div>
-        <label></label>
+        
     </form>
 </body>
     <script>
