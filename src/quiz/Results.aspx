@@ -17,10 +17,6 @@
                     <td>Score:</td>
                     <td><asp:Label ID="ScoreLabel" runat="server" /></td>
                 </tr>
-                <tr>
-                    <td>Time Taken:</td>
-                    <td><asp:Label ID="TimeLabel" runat="server" /></td>
-                </tr>
             </table>
         </section>
     </main>

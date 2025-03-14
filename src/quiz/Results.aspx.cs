@@ -36,10 +36,8 @@ namespace quiz
                 int totalQuestions = attempt.Results.Count();
 
                 // Display the results on the page
-                float percentage = (correctAnswers / totalQuestions);
                 QuizTitleLabel.Text = $"{quiz.Name}";
                 ScoreLabel.Text = $"{correctAnswers} / {totalQuestions} ({((double)correctAnswers / totalQuestions) * 100}%)";
-                TimeLabel.Text = $"{FormatTime(quiz.Time)}";
             }
         }
 
