@@ -36,7 +36,7 @@ namespace quiz
                 int totalQuestions = attempt.Results.Count();
 
                 // Display the results on the page
-                ScoreLabel.Text = $"{correctAnswers} / {totalQuestions} ({((double)correctAnswers / totalQuestions) * 100}%)";
+                ScoreLabel.Text = $"{correctAnswers} / {totalQuestions} ({((double)correctAnswers / totalQuestions) * 100:0.0}%)";
             }
         }
 
