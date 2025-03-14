@@ -72,11 +72,11 @@ namespace quiz
                 Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
                 if (attempt == null)
                 {
-                    ErrorLabel.Text = "Student number not found. Please check and try again.";
+                    ErrorLabel.Text = "You are not enrolled in this quiz.";
                     return;
                 }
             }
-            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
+            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress/{studentNumber}";
             Response.Redirect(quizUrl);
         }
 
