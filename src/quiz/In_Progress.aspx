@@ -1,9 +1,15 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="In_Progress.aspx.cs" Inherits="quiz.In_Progress" %>
 
+<!--
+    <link href="/Content/In_Progress.css" type="text/css" rel="stylesheet" />
+-->
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphMainBody" runat="server">
         <div 
             id="timer">
         </div>
+
+        <div id="question-count">Question Count</div>
     <script>
 
        
@@ -12,6 +18,12 @@
     
     
     <div id="question-number">Question 1</div>
+
+    <div id="question-body">Question Body</div>
+
+    <div id="question-answer-options">Answer Options</div>
+
+    <button OnClick="nextQuestion()"/>Sumbit Answer<button/>
 
     <script>
         let currentQuestionIndex = 0; // variable used to track the current question number/index
@@ -40,4 +52,4 @@
         }
     </script>
 
-    </asp:Content>
+</asp:Content>
