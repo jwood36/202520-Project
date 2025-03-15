@@ -1,0 +1,46 @@
+﻿/* Container for the results */
+.results-container {
+    background-color: #D3D3D3;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Styling the results section */
+.results {
+    margin-bottom: 20px;
+}
+
+    .results h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+/* Styling for the result and percentage labels */
+#QuizTitleLabel, #ScoreLabel, #PercentageLabel {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.results {
+    padding: 1px;
+    background-color: white;
+    display: inline-block
+}
+
+/* Styling the disclaimer section */
+.disclaimer {
+    background-color: #F5DEB3;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+    .disclaimer h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
