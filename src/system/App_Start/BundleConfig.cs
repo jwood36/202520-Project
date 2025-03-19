@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
 
-namespace system {
+namespace coding_lms {
 	public class BundleConfig {
 		// For more information on Bundling, visit https://go.microsoft.com/fwlink/?LinkID=303951
 		public static void RegisterBundles ( BundleCollection bundles ) {

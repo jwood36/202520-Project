@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace system {
+namespace coding_lms {
 
 
 	public partial class SiteMaster {

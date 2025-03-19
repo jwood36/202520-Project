@@ -8,8 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 
-namespace system
-{
+namespace coding_lms {
     public class Global : HttpApplication
     {
         void Application_Start(object sender, EventArgs e)
