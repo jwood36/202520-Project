@@ -21,7 +21,7 @@ namespace coding_lms.data {
 				PPQ = 1
 			};
 #else
-
+			ret = null;
 #endif
 
 			// Return Value Result
