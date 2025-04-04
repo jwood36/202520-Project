@@ -5,10 +5,6 @@ using Microsoft.AspNet.FriendlyUrls;
 namespace quiz {
 	public static class RouteConfig {
 		public static void RegisterRoutes ( RouteCollection routes ) {
-
-			// Test Page Route
-			routes.MapPageRoute ( routeName: ""
-				, routeUrl: "test/{testname}" , physicalFile: "~/test.aspx" );
 			
 			//Landing Page Route
             routes.MapPageRoute(
@@ -17,6 +13,10 @@ namespace quiz {
 			// Define the custom route for InProgress Page
 			RouteTable.Routes.MapPageRoute(
 				"InProgressRoute","{termid}-{crn}/{shortname}/in-progress", "~/In_Progress.aspx");
+
+            RouteTable.Routes.MapPageRoute(
+                "ResultsRoute","{termid}-{crn}/{shortname}/results", "~/Results.aspx" 
+            );
 
             var settings = new FriendlyUrlSettings();
 			settings.AutoRedirectMode = RedirectMode.Permanent;

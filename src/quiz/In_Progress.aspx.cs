@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using coding_lms.data;
@@ -157,7 +158,11 @@ namespace quiz
             // If all questions have been answered, redirect to the results page
             if (currentQuestionIndex >= totalQuestions)
             {
-                Response.Redirect("Results.aspx");
+                string termId = Page.RouteData.Values["termid"] as string;
+                string crn = Page.RouteData.Values["crn"] as string;
+                string shortName = Page.RouteData.Values["shortname"] as string;
+                string resultsUrl = $"~/{termId}-{crn}/{shortName}/results";
+                Response.Redirect(resultsUrl);
             }
             else
             {
