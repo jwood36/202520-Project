@@ -14,16 +14,19 @@ header {
     color: white;
     padding: 10px;
     display: flex;
-    justify-content: center; /* Centering all items within header */
+    justify-content: center;
     align-items: center;
     position: relative;
 }
 
+    /* Styling the logo */
     header .logo {
         font-size: 1.5em;
         font-weight: bold;
         position: absolute;
-        left: 10px; /* Align to the left */
+        left: 10px;
+        color: white; 
+        text-decoration: none; 
     }
 
 nav {
@@ -34,7 +37,7 @@ nav {
 }
 
 .test-name {
-    font-size: 2em; /* Increased font size */
+    font-size: 2em;
     text-align: center;
     margin: 0 auto;
 }
