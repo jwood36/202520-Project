@@ -136,6 +136,18 @@ namespace quiz
                 }
             }
 
+            //Checks if answers are correct
+            using (TestDB testDb = new TestDB())
+            {
+                var questions = testDb.GetQuestion(currentQuizGuid); // Fetch all questions for the quiz
+                var question = questions.ElementAt(currentQuestionIndex); // Get current question
+
+                // Find the correct answers for this question
+                var correctAnswers = question.Answers.Where(a => a.IsCorrect).Select(a => a.Key).ToList();
+
+                bool isCorrect = correctAnswers.Contains(selectedAnswer); // Check if the selected answer is correct
+            }
+
             // Increment the question index to move to the next question
             currentQuestionIndex++;
 
