@@ -14,6 +14,10 @@ namespace quiz {
             routes.MapPageRoute(
 				"QuizLanding", "{termid}-{crn}/{shortname}", "~/LandingPage.aspx");
 
+			// Define the custom route for InProgress Page
+			RouteTable.Routes.MapPageRoute(
+				"InProgressRoute","{termid}-{crn}/{shortname}/in-progress", "~/In_Progress.aspx");
+
             var settings = new FriendlyUrlSettings();
 			settings.AutoRedirectMode = RedirectMode.Permanent;
 			routes.EnableFriendlyUrls ( settings );

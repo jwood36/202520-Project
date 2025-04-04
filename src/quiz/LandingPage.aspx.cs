@@ -87,7 +87,7 @@ namespace quiz
             // Store student number in session
             Session["StudentID"] = studentNumber;
 
-            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
+            string quizUrl = $"~/{termId}-{crn}/{shortName}/in-progress";
             Response.Redirect(quizUrl);
         }
 
