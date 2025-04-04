@@ -13,7 +13,7 @@ namespace quiz
         {
             // Check if the Attempt ID
             // Replace Session for testing purposes
-            var attemptId = Session["AttemptID"];
+            var attemptId = 0123415789;
 
             if (attemptId == null)
             {
@@ -38,18 +38,6 @@ namespace quiz
                 // Display the results on the page
                 ScoreLabel.Text = $"{correctAnswers} / {totalQuestions} ({((double)correctAnswers / totalQuestions) * 100:0.0}%)";
             }
-        }
-
-        // Format the time
-        private string FormatTime(int timeInMinutes)
-        {
-            if (timeInMinutes >= 60)
-            {
-                int hours = timeInMinutes / 60;
-                int minutes = timeInMinutes % 60;
-                return (minutes > 0) ? $"{hours} hrs {minutes} mins" : $"{hours} hrs";
-            }
-            return $"{timeInMinutes} mins";
         }
     }
 }
