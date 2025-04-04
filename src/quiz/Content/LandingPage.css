@@ -1,0 +1,38 @@
+﻿h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    width: 25rem !important;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: left;
+    background: darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate !important;
+}
+td:not(.noindent) {
+    text-indent: 3em;
+}
+
+th, td {
+    padding: 10px;
+}
+
+button, input[type="submit"], .start-button {
+    background-color: rgb(60, 155, 0);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 10rem;
+
+}
+
+    button:hover, input[type="submit"]:hover, .start-button:hover {
+        background-color: rgb(40, 135, 0);
+    }
