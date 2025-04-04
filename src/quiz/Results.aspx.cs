@@ -11,7 +11,7 @@ namespace quiz
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if the Attempt ID
+            // Currently uses hard coded value for testing purposes 
             // Replace Session for testing purposes
             var attemptId = 0123415789;
 
