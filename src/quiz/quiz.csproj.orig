@@ -197,10 +197,6 @@
     </Compile>
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LandingPage.aspx.designer.cs">
-      <DependentUpon>LandingPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="In_Progress.aspx.cs">
       <DependentUpon>In_Progress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
