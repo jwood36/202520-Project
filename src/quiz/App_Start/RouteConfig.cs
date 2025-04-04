@@ -9,9 +9,12 @@ namespace quiz {
 			// Test Page Route
 			routes.MapPageRoute ( routeName: ""
 				, routeUrl: "test/{testname}" , physicalFile: "~/test.aspx" );
+			
+			//Landing Page Route
+            routes.MapPageRoute(
+				"QuizLanding", "{termid}-{crn}/{shortname}", "~/LandingPage.aspx");
 
-
-			var settings = new FriendlyUrlSettings();
+            var settings = new FriendlyUrlSettings();
 			settings.AutoRedirectMode = RedirectMode.Permanent;
 			routes.EnableFriendlyUrls ( settings );
 

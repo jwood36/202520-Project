@@ -11,34 +11,34 @@ namespace quiz
 {
 
 
-    public partial class SiteMaster
+    public partial class ResultsPage
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// ScoreLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.Label ScoreLabel;
 
         /// <summary>
-        /// cphNavBar control.
+        /// PercentageLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphNavBar;
+        protected global::System.Web.UI.WebControls.Label PercentageLabel;
 
         /// <summary>
-        /// cphMainBody control.
+        /// DisclaimerLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphMainBody;
+        protected global::System.Web.UI.WebControls.Label DisclaimerLabel;
     }
 }

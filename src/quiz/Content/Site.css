@@ -1,21 +1,58 @@
-﻿/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+﻿/* Content/site.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
+    /* Styling the logo */
+    header .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        position: absolute;
+        left: 10px;
+        color: white; 
+        text-decoration: none; 
     }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.test-name {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
