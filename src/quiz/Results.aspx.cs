@@ -18,7 +18,7 @@ namespace quiz
             if (attemptId == null)
             {
                 // Redirect if the attempt ID is not found
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/Error.aspx");
                 return;
             }
 
