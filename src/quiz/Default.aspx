@@ -27,16 +27,6 @@
                         <asp:Button ID="StartButton" runat="server" CssClass="start-button" Text="Start" OnClick="StartButton_Click" />
                     </td>
                 </tr>
-                <!-- Hidden confirmation panel -->
-                <tr>
-                    <td align="center" class="noindent">
-                        <asp:Panel ID="ConfirmationPanel" runat="server" Visible="false">
-                            <p>Are you sure you want to start the quiz? Once started, you cannot go back.</p>
-                            <asp:Button ID="ConfirmButton" runat="server" Text="Yes, Start Quiz" OnClick="ConfirmButton_Click" />
-                            <asp:Button ID="CancelButton" runat="server" Text="No, Cancel" OnClick="CancelButton_Click" />
-                        </asp:Panel>
-                    </td>
-                </tr>
             </table>
         </section>
     </main>

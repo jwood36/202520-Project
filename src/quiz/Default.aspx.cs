@@ -51,16 +51,6 @@ namespace quiz
 
         protected void StartButton_Click(object sender, EventArgs e)
         {
-            // Show the confirmation panel
-            ConfirmationPanel.Visible = true;
-        }
-
-        protected void ConfirmButton_Click(object sender, EventArgs e)
-        {
-            // Get the same quiz details again to direct to URL
-            string termId = Page.RouteData.Values["termid"] as string;
-            string crn = Page.RouteData.Values["crn"] as string;
-            string shortName = Page.RouteData.Values["shortname"] as string;
 
             // Get student number from input field
             string studentNumber = StudentNumberTextBox.Text.Trim();
@@ -72,31 +62,33 @@ namespace quiz
                 return;
             }
 
+            Session["StudentID"] = studentNumber;
+            // Get the quiz details from the URL again
+            string termId = Page.RouteData.Values["termid"] as string;
+            string crn = Page.RouteData.Values["crn"] as string;
+            string shortName = Page.RouteData.Values["shortname"] as string;
+
+            // Generate the quiz URL based on the details
+            string quizUrl = $"~{termId}-{crn}/{shortName}/In_Progress";
+
+            // Display JavaScript confirmation alert with the redirection URL
+            string script = $"if (confirm('Are you sure you want to start the quiz? Once started, you cannot go back.')) {{ window.location = '{quizUrl}'; }}";
+            ClientScript.RegisterStartupScript(this.GetType(), "Confirmation", script, true);
+
             // Check if the student exists in TestDB
             //This does not seem functional commenting out for now 
-           // using (TestDB testDb = new TestDB())
-           // {
-           //     Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
-           //     if (attempt == null)
-           //     {
-           //         ErrorLabel.Text = "You are not enrolled in this quiz.";
-           //         return;
-           //     }
-           // }
+            // using (TestDB testDb = new TestDB())
+            // {
+            //     Attempt attempt = testDb.GetAttempt(shortName, studentNumber);
+            //     if (attempt == null)
+            //     {
+            //         ErrorLabel.Text = "You are not enrolled in this quiz.";
+            //         return;
+            //     }
+            // }
 
             // Store student number in session
-            Session["StudentID"] = studentNumber;
-
-            string quizUrl = $"~/quiz/{termId}-{crn}/{shortName}/in-progress";
-            Response.Redirect(quizUrl);
         }
-
-        protected void CancelButton_Click(object sender, EventArgs e)
-        {
-            // Hide the confirmation panel if the user cancels
-            ConfirmationPanel.Visible = false;
-        }
-
 
         // Converts time in minutes assumes time is given in minutes and not seconds
         private string FormatTime(int timeInMinutes)
