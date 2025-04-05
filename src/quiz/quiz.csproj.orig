@@ -132,10 +132,10 @@
     <Content Include="Content\Results.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\LandingPage.css" />
-    <Content Include="Error.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Default.aspx" />
+    <Content Include="LandingPage.aspx" />
     <Content Include="Content\In_Progress.css" />
     <Content Include="In_Progress.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -181,22 +181,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\SubmitController.cs" />
-    <Compile Include="Error.aspx.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Error.aspx.designer.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="In_Progress.aspx.cs">
       <DependentUpon>In_Progress.aspx</DependentUpon>

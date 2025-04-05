@@ -11,52 +11,43 @@ namespace quiz
 {
 
 
-    public partial class LandingPage
+    public partial class In_Progress
     {
 
         /// <summary>
-        /// TermLabel control.
+        /// questionCountLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TermLabel;
+        protected global::System.Web.UI.WebControls.Label questionCountLabel;
 
         /// <summary>
-        /// ErrorLabel control.
+        /// questionBodyLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.Label questionBodyLabel;
 
         /// <summary>
-        /// StudentNumberTextBox control.
+        /// answerOptionsPlaceholder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentNumberTextBox;
+        protected global::System.Web.UI.WebControls.PlaceHolder answerOptionsPlaceholder;
 
         /// <summary>
-        /// TimeLabel control.
+        /// nextQuestionButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TimeLabel;
-
-        /// <summary>
-        /// StartButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StartButton;
+        protected global::System.Web.UI.WebControls.Button nextQuestionButton;
     }
 }
