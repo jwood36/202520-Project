@@ -69,7 +69,7 @@ namespace quiz
             string shortName = Page.RouteData.Values["shortname"] as string;
 
             // Generate the quiz URL based on the details
-            string quizUrl = $"~{termId}-{crn}/{shortName}/In_Progress";
+            string quizUrl = $"{termId}-{crn}/{shortName}/in-progress";
 
             // Display JavaScript confirmation alert with the redirection URL
             string script = $"if (confirm('Are you sure you want to start the quiz? Once started, you cannot go back.')) {{ window.location = '{quizUrl}'; }}";
