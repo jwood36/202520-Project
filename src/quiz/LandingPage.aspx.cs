@@ -45,6 +45,9 @@ namespace quiz
 
                     // Format and display the quiz time
                     TimeLabel.Text = $"{FormatTime(quiz.Time)}";
+
+                    // Assign returned Quiz Total Time to a session variable
+                    Session["QuizTime"] = quiz.Time;
                 }
             
         }
