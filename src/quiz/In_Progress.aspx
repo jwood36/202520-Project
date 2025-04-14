@@ -20,6 +20,12 @@
 
                 }
 
+                //This else statement will redirect to the Results page if the timer is no longer positive
+                else
+                {
+                    window.location.replace("Results.aspx");
+                }
+
             }
             timer = setInterval(checkTime, 1000);
 
