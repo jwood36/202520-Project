@@ -10,6 +10,7 @@
             var sec = parseInt(totalAmountOfTime % 60);// sec variable gets the remainder of the totalAmountOfTime with the % sign
             var timer;
 
+            //checkTime function will struggle to show time under 1min like (00:59)
             //checkTime function takes the totalAmountOfTime in seconds and converts it to minutes and seconds
             function checkTime() {
                 document.getElementById("timer").innerHTML = "Time left: " + min + " minutes ";
@@ -26,9 +27,9 @@
                 {
                     window.location.replace("Results.aspx");
                 }
-
+                
             }
-            timer = setInterval(checkTime, 1000);
+            timer = setInterval(checkTime, 1000); // use the setinterval function to check the time every 1 second
 
         </script>
     </div>
