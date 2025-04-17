@@ -10,5 +10,11 @@ namespace coding_lms {
 		protected void Page_Load ( object sender , EventArgs e ) {
 
 		}
-	}
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login.aspx");
+        }
+
+    }
 }
