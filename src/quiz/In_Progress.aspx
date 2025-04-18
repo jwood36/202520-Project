@@ -46,5 +46,5 @@
         <asp:PlaceHolder ID="answerOptionsPlaceholder" runat="server" />
     </div>
 
-    <asp:Button ID="nextQuestionButton" runat="server" Text="Submit Answer" OnClick="nextQuestion_Click" />
+    <asp:Button ID="nextQuestionButton" runat="server" OnClick="nextQuestion_Click" />
 </asp:Content>
