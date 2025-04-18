@@ -7,75 +7,102 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace quiz
+namespace coding_lms
 {
 
 
-    public partial class LandingPage
+    public partial class SiteMaster
     {
 
         /// <summary>
-        /// TermLabel control.
+        /// LoginView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TermLabel;
+        protected global::System.Web.UI.WebControls.LoginView LoginView1;
 
         /// <summary>
-        /// ErrorLabel control.
+        /// MainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLabel;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
 
         /// <summary>
-        /// StudentNumberTextBox control.
+        /// DialogDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentNumberTextBox;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DialogDiv;
 
         /// <summary>
-        /// TimeLabel control.
+        /// DialogTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TimeLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlTable DialogTable;
 
         /// <summary>
-        /// StartButton control.
+        /// TableHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StartButton;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableHeader;
 
         /// <summary>
-        /// ConfirmationPanel control.
+        /// UsernameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel ConfirmationPanel;
+        protected global::System.Web.UI.WebControls.Label UsernameLabel;
 
         /// <summary>
-        /// ConfirmButton control.
+        /// UsernameTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ConfirmButton;
+        protected global::System.Web.UI.WebControls.TextBox UsernameTextbox;
+
+        /// <summary>
+        /// PasswordLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PasswordLabel;
+
+        /// <summary>
+        /// PasswordTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PasswordTextbox;
+
+        /// <summary>
+        /// MFA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MFA;
 
         /// <summary>
         /// CancelButton control.
@@ -85,5 +112,14 @@ namespace quiz
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelButton;
+
+        /// <summary>
+        /// LoginButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LoginButton;
     }
 }
