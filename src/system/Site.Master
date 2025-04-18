@@ -56,7 +56,7 @@
         <div id="DialogDiv" runat="server">
             <table  id="DialogTable" runat="server">
                 <tr>
-                    <th>
+                    <th id="TableHeader" colspan="2">
                         Authentication
                     </th>
                 </tr>
