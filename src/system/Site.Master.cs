@@ -13,7 +13,8 @@ namespace coding_lms {
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Login.aspx");
+            // Response.Redirect("~/Login.aspx");
+            DialogDiv.Style["Display"] = "block";
         }
 
     }

@@ -52,6 +52,47 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </main>
 
+        <div id="DialogDiv" runat="server">
+            <table  id="DialogTable" runat="server">
+                <tr>
+                    <th>
+                        Authentication
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:label id="UsernameLabel" runat="server" class="Labels">Username: </asp:label>
+                    </td>
+                    <td>  
+                        <asp:textbox id="UsernameTextbox" runat="server" class="TB" type="text" placeholder="Line 1"/>
+                    </td>     
+                </tr>
+                <tr>
+                    <td>
+                        <asp:label id="PasswordLabel" runat="server" class="Labels">Password: </asp:label>
+                    </td>
+                    <td>  
+                        <asp:textbox id="PasswordTextbox" runat="server" class="TB" type="password" placeholder="********"/>
+                    </td>
+                </tr>
+                <tr id="MFA">
+                    <td >
+                        <label id="">MFA: </label>
+                    </td>
+                    <td>
+                        <input id="" type="text" placeholder="Line 1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:button id="CancelButton" runat="server" class="DialogBTN" Text="Cancel" />
+                    </td>
+                    <td>
+                        <asp:button id="LoginButton" runat="server" class="DialogBTN" Text="Login"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </form>
 
     <script src="~/Scripts/jquery.js"></script>
