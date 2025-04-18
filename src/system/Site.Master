@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title><%: Page.Title %></title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Site2.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:button id="CancelButton" runat="server" class="DialogBTN" Text="Cancel" />
+                        <asp:button id="CancelButton" runat="server" class="DialogBTN" Text="Cancel" onclick="CancelButton_OnClick"/>
                     </td>
                     <td>
                         <asp:button id="LoginButton" runat="server" class="DialogBTN" Text="Login"/>

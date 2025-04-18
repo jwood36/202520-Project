@@ -31,5 +31,17 @@ textarea {
 }
 
 #DialogTable {
-    
+    text-align: center;
+}
+
+#MFA {
+    display: none;
+}
+
+#LoginButton {
+    background-color: greenyellow;
+}
+
+#DialogHead {
+    text-align: center;
 }

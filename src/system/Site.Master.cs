@@ -17,5 +17,9 @@ namespace coding_lms {
             DialogDiv.Style["Display"] = "block";
         }
 
+        protected void CancelButton_OnClick(object sender, EventArgs e)
+        {
+            DialogDiv.Style["Display"] = "none";
+        }
     }
 }
