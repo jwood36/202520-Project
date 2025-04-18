@@ -19,3 +19,44 @@ textarea {
         padding: 0;
     }
 }
+
+#DialogDiv {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    border: 3px solid lightslategrey;   
+    background-color: lightgrey;
+}
+
+#DialogTable {
+    text-align: center;
+    margin: 20px
+}
+
+#MFA {
+    display: none;
+}
+
+#LoginButton {
+    background-color: greenyellow;
+}
+
+th {
+    text-align: center;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: lightslategrey;
+}
+
+#TableHeader {
+
+}
+
+.TB {
+    width: 8rem;
+}
+
+td, th {
+    padding: 10px;
+}

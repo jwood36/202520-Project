@@ -10,5 +10,16 @@ namespace coding_lms {
 		protected void Page_Load ( object sender , EventArgs e ) {
 
 		}
-	}
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            // Response.Redirect("~/Login.aspx");
+            DialogDiv.Style["Display"] = "block";
+        }
+
+        protected void CancelButton_OnClick(object sender, EventArgs e)
+        {
+            DialogDiv.Style["Display"] = "none";
+        }
+    }
 }
