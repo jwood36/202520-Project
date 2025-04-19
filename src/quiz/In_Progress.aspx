@@ -4,8 +4,8 @@
     <div id="timer">
         <script>
             // Access QuizTime session variable and assign it to totalAmountOfTime
-            var totalAmountOfTime = <%=Session["QuizTime"] %>; //this is total time in seconds so 300 seconds is 5mins
-
+            var totalAmountOfTime = sessionStorage.getItem("QuizTime2"); //this is total time in seconds so 300 seconds is 5mins
+            
             var min = parseInt(totalAmountOfTime / 60); //this variable will take the totalamountoftime divide by 60 to get the minutes and parse
             var sec = parseInt(totalAmountOfTime % 60);// sec variable gets the remainder of the totalAmountOfTime with the % sign
             var timer;
@@ -17,6 +17,7 @@
                 //this if statement checks to make sure the timer does not go to the negative
                 if (totalAmountOfTime > 0) {
                     totalAmountOfTime = totalAmountOfTime - 1;
+                    sessionStorage.setItem("QuizTime2", totalAmountOfTime);
                     min = parseInt(totalAmountOfTime / 60);
                     sec = parseInt(totalAmountOfTime % 60);
 
@@ -46,5 +47,5 @@
         <asp:PlaceHolder ID="answerOptionsPlaceholder" runat="server" />
     </div>
 
-    <asp:Button ID="nextQuestionButton" runat="server" Text="Submit Answer" OnClick="nextQuestion_Click" />
+    <asp:Button ID="nextQuestionButton" runat="server" OnClick="nextQuestion_Click" />
 </asp:Content>
