@@ -45,7 +45,10 @@ namespace quiz
 
                     // Format and display the quiz time
                     TimeLabel.Text = $"{FormatTime(quiz.Time)}";
-                }
+
+                    // Assign returned Quiz Total Time to a session variable
+                    Session["QuizTime"] = quiz.Time;
+            }
             
         }
 
@@ -69,7 +72,7 @@ namespace quiz
             string shortName = Page.RouteData.Values["shortname"] as string;
 
             // Generate the quiz URL based on the details
-            string quizUrl = $"~{termId}-{crn}/{shortName}/In_Progress";
+            string quizUrl = $"/{termId}-{crn}/{shortName}/in-progress";
 
             // Display JavaScript confirmation alert with the redirection URL
             string script = $"if (confirm('Are you sure you want to start the quiz? Once started, you cannot go back.')) {{ window.location = '{quizUrl}'; }}";

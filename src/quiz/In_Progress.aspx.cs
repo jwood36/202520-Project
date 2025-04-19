@@ -34,8 +34,24 @@ namespace quiz
             }
             else
             {
+                using (TestDB testDb = new TestDB())
+                {
+                    var questions = testDb.GetQuestion(currentQuizGuid); // Fetch all the questions
+                    totalQuestions = questions.Count(); // Set totalQuestions
+                }
                 // Retrieve the current question index from session
                 currentQuestionIndex = (int)Session["currentQuestionIndex"];
+            }
+            if (totalQuestions != 0)
+            {
+                if (totalQuestions == currentQuestionIndex + 2)
+                {
+                    nextQuestionButton.Text = "Submit Test";
+                }
+                else
+                {
+                    nextQuestionButton.Text = "Submit Answer";
+                }
             }
         }
 
