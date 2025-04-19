@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="coding_lms.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <form runat="server">
+
+        <!-- Header -->
+        <header class="bg-dark text-white p-2 d-flex justify-content-between align-items-center">
+            <span class="fw-bold">LOGO</span>
+            <!-- Will be changed to match the school system name currently no way to access -->
+            <span class="fs-4 fw-bold text-center flex-grow-1">System Name</span>
+            <span>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        <asp:LinkButton ID="LoginButton" runat="server" CssClass="text-white" OnClick="LoginButton_Click">Login</asp:LinkButton>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <asp:HyperLink ID="ProfileLink" runat="server" CssClass="text-white" NavigateUrl="~/Profile.aspx">
+                            <%: Context.User.Identity.Name %>
+                        </asp:HyperLink>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </span>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="container mt-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="/institutions">Institutions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/terms">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">Users</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <div id="DialogDiv" runat="server">
+            <table  id="DialogTable" runat="server">
+                <tr>
+                    <th id="TableHeader" colspan="2">
+                        Authentication
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:label id="UsernameLabel" runat="server" class="Labels">Username: </asp:label>
+                    </td>
+                    <td>  
+                        <asp:textbox id="UsernameTextbox" runat="server" class="TB" type="text" placeholder="Line 1"/>
+                    </td>     
+                </tr>
+                <tr>
+                    <td>
+                        <asp:label id="PasswordLabel" runat="server" class="Labels">Password: </asp:label>
+                    </td>
+                    <td>  
+                        <asp:textbox id="PasswordTextbox" runat="server" class="TB" type="password" placeholder="********"/>
+                    </td>
+                </tr>
+                <tr id="MFA">
+                    <td >
+                        <label id="">MFA: </label>
+                    </td>
+                    <td>
+                        <input id="" type="text" placeholder="Line 1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:button id="CancelButton" runat="server" class="DialogBTN" Text="Cancel" onclick="CancelButton_OnClick"/>
+                    </td>
+                    <td>
+                        <asp:button id="LoginButton" runat="server" class="DialogBTN" Text="Login"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

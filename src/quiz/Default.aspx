@@ -30,4 +30,8 @@
             </table>
         </section>
     </main>
+    <script>
+        sessionStorage.QuizTime2 = <%=Session["QuizTime"]%>;
+    </script>
 </asp:Content>
+
